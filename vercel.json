@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "stint-ui/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "stint-ui/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "stint-ui/dist/$1"
+    }
+  ]
+}
